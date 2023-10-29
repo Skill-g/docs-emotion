@@ -1,15 +1,11 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": "Старт",
   "about": {
-    "title": "About",
+    "title": "О проекте",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+    "title": "Контакты ↗",
+    "type": "page"
   }
 }
