@@ -8,7 +8,6 @@
     "title": "Контакты ↗",
     "type": "page"
   },
-  "tech": {
-    "title": "Настройка🔎"
-  }
+  "tech": "Настройка🔎",
+  "hello": "hello"
 }
