@@ -1,0 +1,27 @@
+# Настройки Nginx
+
+### emotion.dev.conf ``` Ваше название может быть иное для конфига ```
+```bash copy
+server {
+    # 80 Порт
+    listen 80;
+    # Имя сервера
+    server_name localhost;
+    # Путь на сервере
+    root /etc/nginx/emotion/dist;
+    
+    index index.html;
+    try_files $uri $uri/ /index.html;
+
+location / {
+        if (-f $request_filename) {
+             expires max;
+             break;
+        }
+        if ($request_filename !~ "\.(js|htc|ico|gif|jpg|png|css)$") {
+             rewrite ^(.*) /index.html last;
+        }
+  }
+}
+
+```

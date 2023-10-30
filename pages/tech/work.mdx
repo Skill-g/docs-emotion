@@ -1,0 +1,67 @@
+import { Callout } from 'nextra/components'
+
+# Работа с проектом
+<Callout type="info">
+Первый запуск приложения
+</Callout>
+<br/>
+# FrontEnd
+
+##### Копируем репозиторий с github
+
+```bash copy
+git clone https://github.com/Skill-g/Emotion.git
+```
+##### После клонирования получаем такую папку, с файлами проекта
+<br/>
+<img src="/img1.jpg" alt="project" />
+
+##### В директории ``` /EmoP ```
+
+ ``` bash copy
+ npm install
+ ```
+
+##### Фронт готов, можете запустить его такой командой
+
+```bash copy
+npm run dev
+```
+
+
+# Backend
+
+##### В директории ``` /Server ```
+
+ ``` bash copy
+ npm install
+ ```
+
+#### После поменяйте в ``` .env ```
+
+##### ``` DATABASE_URL ``` Меняйте данные в зависимости от того какая ваша DB, на проекте используется [prisma](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-typescript-mysql)
+
+```bash copy
+DATABASE_URL="mysql://johndoe:randompassword@localhost:3306/mydb"
+JWT_SECRET="random_key"
+```
+
+#### Запушите таблицы или запулите их с помощью [prisma](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-typescript-mysql)
+```bash copy
+npx prisma db push
+```
+
+```bash copy
+npx prisma db pull
+```
+
+#### Backend готов для запуска напишите в ``` cmd ```
+
+```bash copy
+node index.js
+```
+
+#### Для запуска и фронта и серверной части зайдите в директорию ``` /EMOPROJECT ```
+```bash copy
+npm run all
+```
